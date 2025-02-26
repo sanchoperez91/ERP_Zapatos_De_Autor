@@ -1,0 +1,1112 @@
+/*{
+    border: rgba(0,0,0,1) 1px solid;
+}*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/cuero2.jpg");
+    /* Corregir la ruta */
+    background-size: cover;
+    /* Asegura que la imagen cubra el contenedor */
+    background-position: center;
+    /* Centra la imagen en el contenedor */
+    overflow: hidden;
+    /* Esto elimina las barras de navegación vertical y horizontal */
+}
+
+
+/* COMIENZO HEADER */
+
+.contenedorbotones {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 0.5%;
+    padding: 0;
+    height: 160%;
+}
+
+.botonesinicio {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #CCBA92;
+    background-color: #FCE7BB;
+    color: #66510A;
+    font-weight: bold;
+    height: 7vh;
+    font-size: 25px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-family: 'Kanit', sans-serif;
+}
+
+.botonesinicio:hover {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #CCBA92;
+    background-color: #593609;
+    color: #FCE7BB;
+    font-weight: bold;
+    height: 7vh;
+    font-size: 25px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-family: 'Kanit', sans-serif;
+    height: 10vh;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.botonesinicio.especial {
+    height: 7vh;
+}
+
+input.radio:checked+label {
+    background-color: #593609;
+    color: #FCE7BB;
+    font-weight: bolder;
+    height: 10vh;
+    font-size: 35px;
+    border-radius: 0px 0px 15px 15px;
+    border: 2px solid black;
+}
+
+.radio {
+    display: none;
+}
+
+.articulospulsado,
+.articulospulsado:hover {
+    background-color: #593609;
+    color: #FCE7BB;
+    font-weight: bolder;
+    height: 10vh;
+    font-size: 35px;
+    border-radius: 0px 0px 15px 15px;
+    border: 2px solid black;
+}
+
+
+/*FINAL HEADER */
+
+
+/* COMIENZO FILTROS */
+
+
+/* FILTROS CREADOS PARA FUTURO:
+FILTRO-SELECT
+<SELECT>, QUE SON LISTAS DESPLEGABLES
+
+FILTRO-OPTION
+<OPTION> DENTRO DE UN <SELECT>, OPCIONES DENTRO DE LA LISTA
+
+FILTRO-TEXTO
+(<INPUT TYPE="TEXT">) DONDE EL USUARIO PUEDE ESCRIBIR
+
+FILTRO-BOTON
+(<BUTTON>) QUE EL USUARIO PRESIONA PARA APLICAR LOS FILTROS SELECCIONADOS O ESCRITOS.
+
+FILTRO-CERRAR
+CIERRE DEL FILTRO, X, (POR SI QUEREMOS HACER LA FUNCION DE CERRAR LOS FILTROS QUE CREO QUE AL FINAL DIGIMOS QUE NO)
+
+FILTRO-CONTENEDOR
+CONTAINER
+
+FILTRO-ENCABEZADO
+PARTE DE ARRIBA DE LOS FILTROS
+
+FILTRO-CHECKBOX
+<INPUT TYPE="CHECKBOX"> SELECCIONAR VARIAS OPCIONES
+
+FILTRO-RADIO
+<INPUT TYPE="RADIO"> BOTONES RADIO
+
+FILTRO-APLICAR
+BOTON DE APLICAR LOS FILTROS
+*/
+
+.contenedor0inicio {
+    background-image: url("../img/fondozapatos.jpg");
+    /* Corregir la ruta */
+    width: 100%;
+    height: 90vh;
+    background-size: cover;
+    /* Asegura que la imagen cubra el contenedor */
+    background-position: center;
+    /* Centra la imagen en el contenedor */
+    margin-top: -15px;
+}
+
+.filtros {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    height: 60%;
+    background-color: #FCE7BB;
+    border: 1px solid black;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    overflow-y: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.filtros.hidden {
+    transform: translateX(-100%);
+}
+
+.encabezadofiltros {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.encabezadofiltros h1 {
+    font-size: 20px;
+    margin: 0;
+    color: black;
+}
+
+.filtro-close {
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+}
+
+.contenidofiltros {
+    margin-top: 20px;
+    flex-grow: 1;
+    padding-right: 10px;
+}
+
+.filtro-item {
+    margin-bottom: 20px;
+}
+
+.filtro-titulo {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.filtro-item label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.filtro-radio {
+    margin-right: 5px;
+}
+
+.filtro-select {
+    padding: 8px;
+    font-size: 14px;
+    width: 100%;
+    margin-top: 5px;
+    background-color: white;
+    border: 1px solid white;
+}
+
+.filtro-texto {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    background-color: white;
+    border: 1px solid white;
+}
+
+.filtro-boton {
+    background-color: #593609;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.filtro-boton:hover {
+    background-color: #66510A;
+}
+
+.filtro-toggle {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 62.5px;
+    /* Un cuarto del ancho de los filtros */
+    height: 60%;
+    background-color: #FCE7BB;
+    border: 1px solid black;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.filtro-toggle span {
+    font-size: 24px;
+}
+
+
+/* FINAL FILTROS */
+
+
+/*  COMIENZO REGISTRO */
+
+.contenedorinicio {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.contenedor1inicio {
+    background-image: url("../img/fondoinicio.png");
+    height: 45vh;
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    margin-top: 30px;
+}
+
+.textoJose {
+    justify-content: center;
+    width: 80%;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 100px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.Jose {
+    text-align: right;
+    align-self: flex-end;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.contenedor2inicio {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contenedor2inicio .imageninicio1 {
+    margin-left: 150px;
+}
+
+.contenedor2inicio .imageninicio2 {
+    margin-right: 250px;
+}
+
+
+/*  FINAL REGISTRO */
+
+.negrita {
+    font-size: 20px !important;
+    background-color: #593609 !important;
+    color: #FCE7BB;
+    position: sticky;
+    /* Cambiado a sticky */
+    top: 0px;
+    /* Se ajusta el valor de 'top' para que quede debajo de .bloque0 */
+    left: 0;
+    right: 0;
+    z-index: 10;
+    width: 100%;
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+.contenedor0 {
+    margin-right: 1.2%;
+    margin-left: 2.5%;
+}
+
+.contenedor2 {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: flex-start;
+    width: 100%;
+    height: 310px;
+    /* Ajusta según necesidad */
+    max-height: 310px;
+    overflow-y: auto;
+    position: relative;
+    padding: 0% 0;
+}
+
+.contenedor2::-webkit-scrollbar {
+    width: 0;
+    /* Para la barra de desplazamiento vertical */
+    background: transparent;
+    /* Puede ser transparente o el color que prefieras */
+}
+
+.bloque0 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 85%;
+    padding: 1% 0;
+    border: 2px, solid, black;
+    font-size: 17px;
+}
+
+.bloque1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    min-width: 10%;
+}
+
+.bloque2 {
+    width: 30%;
+}
+
+.contenedorbotones2 {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0;
+    margin-left: 2%;
+    height: 120px;
+    margin-top: 0px;
+}
+
+.crud {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border: 3px solid #CCBA92;
+    background-color: #593609;
+    color: #FCE7BB;
+    font-weight: bold;
+    height: 7vh;
+    font-size: 25px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-family: 'Kanit', sans-serif;
+}
+
+.crud:hover {
+    /* Estilos que deseas aplicar cuando el elemento .crud es hover */
+    background-color: #FCE7BB;
+    color: #593609;
+    cursor: pointer;
+    height: 10vh;
+    border-radius: 0px 0px 15px 15px;
+    text-align: center;
+}
+
+.crudpulsado {
+    text-align: center;
+    font-size: 35px;
+    color: #593609;
+    border: 3px solid #593609;
+    background-color: #FCE7BB;
+    font-weight: bold;
+    height: 10vh;
+    border-radius: 0px 0px 15px 15px;
+}
+
+
+/*AÑDIR EMPLEADOS*/
+
+
+/* Estilos para el fondo sombreado */
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background: rgba(0, 0, 0, 0.5);*/
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    max-width: 1300px;
+    margin-left: 20%;
+    font-size: 20px;
+    margin-top: 10%;
+}
+
+
+/* Estilos para el formulario centrado */
+
+#overlay .forminsercion {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    position: relative;
+    overflow-y: auto;
+    /* Habilita el desplazamiento vertical */
+    max-height: 70vh;
+    margin-bottom: 15%;
+    /* Ajusta la altura máxima según tus necesidades */
+}
+
+
+/* Estilos para el botón de cerrar */
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+
+/* Tu CSS existente */
+
+#divRespuesta {
+    height: 40px;
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-family: 'Kanit', sans-serif;
+    border: 0.5px groove;
+}
+
+#contTotal {
+    padding: 20px;
+    background-color: #ece8e0;
+    /* Fondo para distinguir */
+    max-width: 800px;
+    margin: 0 auto;
+    border: 4px solid #593609;
+    border-radius: 8px;
+}
+
+.divTituloAñadir {
+    text-align: center;
+    margin-bottom: 20px;
+    /* Separación del resto */
+}
+
+.tituloAñadir {
+    font-size: 2.5rem;
+    color: #593609;
+}
+
+.contDatosForm1 {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que los elementos se ajusten si la pantalla es pequeña */
+    gap: 20px;
+    /* Espaciado entre columnas */
+    justify-content: space-between;
+}
+
+.contAñadir1 {
+    flex: 1;
+    /* Cada columna ocupa el mismo espacio */
+    min-width: 300px;
+    /* Tamaño mínimo de cada columna */
+}
+
+label {
+    display: block;
+    /* Apilar los labels sobre los inputs */
+    margin-bottom: 8px;
+    /* Separación con el input */
+    font-weight: bold;
+    font-size: 25px;
+}
+
+input {
+    width: 100%;
+    height: 30px;
+    padding: 8px;
+    border: 1px solid #524830;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    /* Separación entre inputs */
+    box-sizing: border-box;
+}
+
+.opciones_select {
+    width: 250px;
+    height: 35px;
+    font-size: 20px;
+}
+
+.divBotonAñadir {
+    display: flex;
+    justify-content: center;
+}
+
+.botonAñadir {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.botonAñadir {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.botonAñadir:hover {
+    background-color: #0056b3;
+}
+
+
+/* FORMATO BOTONES DE COMPRAR Y VENTA */
+
+.buttoncontainercompraventa {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 6vh;
+    align-items: flex-start;
+    text-align: center;
+    margin-bottom: 0%;
+    padding-bottom: 21px;
+}
+
+.buttoncompraventa {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #593609;
+    background-color: #9A843E;
+    color: #FCE7BB;
+    font-weight: bold;
+    height: 100%;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-family: 'Kanit', sans-serif;
+    -webkit-text-stroke: black 1px;
+    align-items: center;
+}
+
+.buttoncompraventa:hover {
+    background-color: #5d4c23;
+    height: 8vh;
+    border-radius: 0px 0px 15px 15px;
+    text-align: center;
+}
+
+.DIFFbuttoncompraventa {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #000000;
+    background-color: #302005;
+    color: rgb(89, 75, 54);
+    font-weight: bold;
+    height: 100%;
+    font-size: 30px;
+    transition: all 0.2s ease-in-out;
+    font-family: 'Kanit', sans-serif;
+    -webkit-text-stroke: black 1px;
+    align-items: center;
+}
+
+.buttoncontainercompraventa2 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 9vh;
+    align-items: flex-start;
+    text-align: center;
+    margin-bottom: 5px;
+    margin: 0;
+}
+
+.buttoncompraventa2 {
+    flex: 1;
+    text-align: center;
+    border: 2px solid #593609;
+    background-color: #9A843E;
+    color: #FCE7BB;
+    font-weight: bold;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-family: 'Kanit', sans-serif;
+    -webkit-text-stroke: black 1px;
+    align-items: top;
+}
+
+.buttoncompraventa2:hover {
+    background-color: #5d4c23;
+    height: 7.5vh;
+    border-radius: 0px 0px 15px 15px;
+    text-align: center;
+    /* Color de fondo al pasar el ratón */
+}
+
+.buttoncompraventa2pulsado {
+    text-align: center;
+    font-size: 35px;
+    color: #FFE8B7;
+    border: 3px solid #593609;
+    background-color: #6b5710;
+    font-weight: bold;
+    height: 7.5vh;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.titulosFormEscandallo {
+    text-align: center;
+    align-items: center;
+}
+
+.contAñadir2 {
+    display: flex;
+    align-items: center;
+}
+
+.no_modificable {
+    background-color: rgb(215, 209, 209);
+    font-size: 20px;
+}
+
+.no_modificable:hover {
+    cursor: not-allowed;
+}
+
+.miniCont {
+    margin-right: 60px;
+}
+
+.miniCont2 {
+    margin-top: 50px;
+}
+
+.tot_esc {
+    font-size: 40px;
+}
+
+.no_modificable2 {
+    background-color: rgb(215, 209, 209);
+    font-size: 20px;
+    height: 50px;
+    width: 150px;
+}
+
+.no_modificable2:hover {
+    cursor: not-allowed;
+}
+
+.botonAñadirMat,
+.botonAñadirArt {
+    height: 40px;
+    width: 110px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.botonEliminar {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.eliminar-btn {
+    background-color: #b91515;
+    color: white;
+    font-weight: bold;
+    width: 2%;
+    height: 40px;
+    text-align: center;
+    justify-content: center;
+    padding-top: 7px;
+    font-size: 17px;
+    cursor: pointer;
+    border: 2px solid #66510a;
+    border-radius: 15px;
+    position: absolute;
+    /* Posiciona el botón de manera absoluta */
+    z-index: 1000;
+    /* Asegura que el botón esté por encima de otros elementos */
+    margin-left: -88%;
+    /* Ajusta el margen según sea necesario */
+}
+
+.eliminar-btn:hover {
+    cursor: pointer;
+}
+
+
+/* INICIO MODIFICAR*/
+
+
+/* Estilos para el overlay de modificar */
+
+
+/* Estilos para el overlay de modificar */
+
+#overlay2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background: rgba(0, 0, 0, 0.5);*/
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    max-width: 1300px;
+    margin-left: 20%;
+    font-size: 20px;
+    margin-top: 10%;
+}
+
+
+/* Estilos para el formulario de modificar centrado */
+
+#overlay2 .formmodificar {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    position: relative;
+    overflow-y: auto;
+    /* Habilita el desplazamiento vertical */
+    max-height: 70vh;
+    margin-bottom: 15%;
+    /* Ajusta la altura máxima según tus necesidades */
+}
+
+.botonModificar {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 130px;
+}
+
+.modificar-btn {
+    background-color: #f8de49;
+    color: #66510a;
+    font-weight: bold;
+    height: 40px;
+    text-align: center;
+    justify-content: center;
+    padding-top: 7px;
+    font-size: 17px;
+    cursor: pointer;
+    border: 2px solid #66510a;
+    border-radius: 15px;
+    position: absolute;
+    /* Posiciona el botón de manera absoluta */
+    z-index: 1000;
+    /* Asegura que el botón esté por encima de otros elementos */
+    margin-left: -88%;
+    /* Ajusta el margen según sea necesario */
+}
+
+
+/* Asegúrate de que estos estilos estén en tu archivo CSS */
+
+#overlay2,
+#overlay2_art {
+    position: fixed;
+    /* Fijo para que esté por encima de todo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    /* Asegúrate de que el z-index sea alto */
+}
+
+.formmodificar {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    z-index: 1001;
+    /* Asegúrate de que el z-index sea alto */
+}
+
+#contenedorDetalle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 200px;
+    margin-bottom: 1%;
+}
+
+.detalle {
+    font-size: 30px;
+    color: #593609;
+    border: 3px solid #593609;
+    background-color: #fce7bb;
+    font-weight: bold;
+    border-radius: 15px 15px 15px 15px;
+    width: 58vh;
+    height: 60px;
+    font-family: 'Kanit', sans-serif;
+}
+
+
+/* FINAL MODIFICAR*/
+
+
+/* REGISTRO BOTON CERRAR SESION*/
+
+label.botonesinicio[for="cerrar sesion"] {
+    background-color: #dc3545;
+    color: white;
+    font-weight: bold;
+    padding: 6px;
+    cursor: pointer;
+    height: 6vh;
+    font-size: 22px;
+}
+
+label.botonesinicio[for="cerrar sesion"]:hover {
+    font-weight: bold;
+    background-color: #c21325;
+    padding-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 10.2vh;
+    font-size: 27px;
+    border-radius: 0px 0px 15px 15px;
+}
+
+
+/* .bot-detalle{ */
+
+
+/* display: inline-block; */
+
+
+/* width: 100px;   Ajusta el tamaño del logo 
+    height: 100px;
+    background-image: url('../img/lupa.png'); /* Ruta de tu imagen */
+
+
+/* background-size: cover;  Ajusta la imagen al tamaño del enlace */
+
+
+/* background-position: center; */
+
+
+/* background-repeat: no-repeat;   */
+
+
+/* overflow: hidden; */
+
+
+/* } */
+
+
+/* REGISTRO BOTON CERRAR SESION*/
+
+.mensaje-bienvenida {
+    font-size: 24px;
+    background-color: #5d4c23;
+    ;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    color: whitesmoke;
+    font-family: 'Kanit', sans-serif;
+}
+
+
+/* COMIENZO Estilos para escandallo/produccion */
+
+.modalEP {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-contentEP {
+    background-color: #f4e3d7;
+    /* Fondo color madera clara */
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #8b5e3c;
+    /* Borde color marrón oscuro */
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.closeEP {
+    color: #8b5e3c;
+    /* Color marrón oscuro */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closeEP:hover,
+.closeEP:focus {
+    color: #d4a373;
+    /* Color amarillo oscuro */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-contentEP h2 {
+    color: #8b5e3c;
+    /* Color marrón oscuro */
+}
+
+.modal-contentEP label {
+    color: #8b5e3c;
+    /* Color marrón oscuro */
+    display: block;
+    margin-top: 10px;
+}
+
+.modal-contentEP input,
+.modal-contentEP select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #8b5e3c;
+    /* Borde color marrón oscuro */
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.modal-contentEP button {
+    background-color: #d4a373;
+    /* Fondo color amarillo oscuro */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-contentEP button:hover {
+    background-color: #8b5e3c;
+    /* Fondo color marrón oscuro */
+}
+
+.producir-btn {
+    background-color: #fce7bb;
+    color: #66510a;
+    font-weight: bold;
+    height: 40px;
+    text-align: center;
+    justify-content: center;
+    padding-top: 7px;
+    font-size: 17px;
+    cursor: pointer;
+    border: 2px solid #66510a;
+    border-radius: 15px;
+    position: absolute;
+    /* Posiciona el botón de manera absoluta */
+    z-index: 1000;
+    /* Asegura que el botón esté por encima de otros elementos */
+    margin-left: -96%;
+    /* Ajusta el margen según sea necesario */
+}
+
+.producir-btn:hover {
+    background-color: #72460c;
+    color: #f3e5c8;
+    cursor: pointer;
+    border: 2.5px solid #66510a;
+}
+
+
+/* final Estilos para escandallo/produccion */
+
+#contenedorPadre {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: flex-start;
+    width: 96.3%;
+    max-height: 500px;
+    overflow-y: auto;
+    position: relative;
+    padding: 0% 0;
+    margin-left: 2.6%;
+    margin-bottom: 2%;
+}
