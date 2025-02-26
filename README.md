@@ -1,81 +1,80 @@
 # ERP_Zapatos_De_Autor
-ERP Empresarial
 
-Descripción
+🏢 ERP Empresarial
+
+📌 Descripción
 
 Este ERP (Enterprise Resource Planning) está diseñado para la gestión integral de cualquier empresa, con especial enfoque en zapaterías y sectores de manufactura. Su objetivo es optimizar los procesos administrativos y productivos, permitiendo una gestión eficiente de empleados, inventarios, producción, proveedores, clientes y facturación.
 
-Funcionalidades
+🚀 Funcionalidades
 
-Gestión de empleados
+👥 Gestión de empleados
 
-Permite registrar, actualizar y eliminar empleados.
+✅ Registro, actualización y eliminación de empleados.
+✅ Administración de roles y permisos dentro del sistema.
+✅ Control de asistencia y gestión de turnos.
 
+📦 Gestión de artículos
 
+✅ Registro y clasificación de productos.
+✅ Control de stock en tiempo real.
+✅ Identificación de materias primas y productos terminados.
 
+🔗 Gestión de proveedores
 
+✅ Registro y actualización de proveedores.
+✅ Control de pedidos y entregas de materia prima.
+✅ Historial de transacciones con cada proveedor.
 
-Gestión de artículos
+🏭 Producción con escandallo
 
-Registro y clasificación de productos.
+✅ Definición de recetas de producción mediante escandallo.
+✅ Creación de productos terminados a partir de materia prima.
+✅ Descuento automático de insumos utilizados en el proceso de fabricación.
+✅ Control de costos de producción y optimización de materiales.
 
-Control de stock en tiempo real.
+📊 Gestión de inventarios
 
-Identificación de materias primas y productos terminados.
+✅ Administración del stock de materias primas y productos terminados.
+✅ Alertas de stock mínimo para evitar faltantes.
+✅ Generación de reportes de movimientos de inventario.
 
-Gestión de proveedores
+💰 Ventas y facturación
 
-Registro y actualización de proveedores.
+✅ Registro y seguimiento de pedidos de clientes.
+✅ Generación y administración de facturas.
+✅ Cálculo automático de impuestos y descuentos.
+✅ Control de pagos y cuentas por cobrar.
 
-Control de pedidos y entregas de materia prima.
+📈 Reportes y estadísticas
 
-Historial de transacciones con cada proveedor.
+✅ Informes detallados de ventas, compras y producción.
+✅ Análisis de rentabilidad y costos de producción.
+✅ Historial de transacciones y auditoría de cambios.
 
-Producción con escandallo
+🛠️ Tecnologías utilizadas
 
-Definición de recetas de producción mediante escandallo.
+Tecnología
 
-Creación de productos terminados a partir de materia prima.
+Descripción
 
-Descuento automático de insumos utilizados en el proceso de fabricación.
+PHP
 
-Control de costos de producción y optimización de materiales.
+Lenguaje principal del backend
 
-Gestión de inventarios
+JavaScript
 
-Administración del stock de materias primas y productos terminados.
+Manejo de interactividad en el frontend
 
-Generación de reportes de movimientos de inventario.
+SQL
 
-Ventas y facturación
+Base de datos para almacenamiento de información
 
-Registro y seguimiento de pedidos de clientes.
-
-Generación y administración de facturas.
-
-
-
-Reportes y estadísticas
-
-Informes de ventas, compras y producción.
-
-Análisis de rentabilidad y costos de producción.
-
-Historial de transacciones y auditoría de cambios.
-
-Tecnologías utilizadas
-
-Backend: PHP
-
-Frontend: JavaScript
-
-Base de datos: SQL
-
-Uso
+📌 Uso
 
 Este ERP permite una administración completa del ciclo de producción y ventas de una empresa. Desde el registro de proveedores y materias primas, hasta la fabricación de productos mediante escandallo y su posterior comercialización, el sistema facilita la toma de decisiones estratégicas mediante reportes detallados y control de inventarios.
 
-Contribución
+🏗️ Contribución
 
 Si deseas contribuir, sigue estos pasos:
 
